@@ -7,7 +7,7 @@ var postcss = require('gulp-postcss');
 var autoprefixer = require('autoprefixer');
 var server = require('browser-sync').create();
 var csso = require('gulp-csso');
-var gulpMerge = require('gulp-merge');
+var gulpMerge = require('merge2');
 var cssComb = require('gulp-csscomb');
 var spritesmith = require('gulp.spritesmith');
 var imagemin = require('gulp-imagemin');
@@ -64,8 +64,15 @@ gulp.task('sprite', function () {
     imgName: 'sprite.png',
     cssName: 'sprite.css'
   }));
+  var imgStream = spriteData.img
+    .pipe(gulp.dest('img/'));
   
-  return spriteData.pipe(gulp.dest('build/img/'));
+  // Pipe CSS stream through CSS optimizer and onto disk
+  var cssStream = spriteData.css
+    .pipe(gulp.dest('sass/global/'));
+  
+  // Return a merged stream to handle both `end` events
+  return gulpMerge(imgStream, cssStream);
 });
 
 gulp.task('copyBootstrapJS', function(){
@@ -92,7 +99,7 @@ gulp.task('images', function() {
 });
 
 gulp.task('build', function(fn){
-  run('clean', 'copy', 'sprite', 'copyBootstrapJS', 'images', 'style', fn);
+  run('clean', 'copy', 'copyBootstrapJS', 'images', 'style', fn);
 });
 
 gulp.task('server', function(){
