@@ -7,6 +7,9 @@ var postcss = require('gulp-postcss');
 var autoprefixer = require('autoprefixer');
 var server = require('browser-sync').create();
 var csso = require('gulp-csso');
+var gulpMerge = require('gulp-merge');
+var cssComb = require('gulp-csscomb');
+var spritesmith = require('gulp.spritesmith');
 var imagemin = require('gulp-imagemin');
 var run = require('run-sequence');
 var del = require('del');
@@ -22,6 +25,7 @@ gulp.task('style', function() {
         'last 2 versions'
       ]})
     ]))
+    .pipe(cssComb())
     .pipe(gulp.dest('build/css'))
     .pipe(csso())
     .pipe(rename('style.min.css'))
@@ -55,6 +59,15 @@ gulp.task('copy', function(){
     .pipe(gulp.dest('build'));
 });
 
+gulp.task('sprite', function () {
+  var spriteData = gulp.src('img/*.png').pipe(spritesmith({
+    imgName: 'sprite.png',
+    cssName: 'sprite.css'
+  }));
+  
+  return spriteData.pipe(gulp.dest('build/img/'));
+});
+
 gulp.task('copyBootstrapJS', function(){
   return gulp.src(['node_modules/bootstrap-sass/assets/javascripts/*.js'])
     .pipe(gulp.dest('build/js'));
@@ -79,7 +92,7 @@ gulp.task('images', function() {
 });
 
 gulp.task('build', function(fn){
-  run('clean', 'copy', 'copyBootstrapJS', 'images', 'style', fn);
+  run('clean', 'copy', 'sprite', 'copyBootstrapJS', 'images', 'style', fn);
 });
 
 gulp.task('server', function(){
