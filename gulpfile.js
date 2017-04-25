@@ -66,12 +66,8 @@ gulp.task('sprite', function () {
   }));
   var imgStream = spriteData.img
     .pipe(gulp.dest('img/'));
-  
-  // Pipe CSS stream through CSS optimizer and onto disk
   var cssStream = spriteData.css
     .pipe(gulp.dest('sass/global/'));
-  
-  // Return a merged stream to handle both `end` events
   return gulpMerge(imgStream, cssStream);
 });
 
