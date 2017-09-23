@@ -1,8 +1,8 @@
 {
-  "name": "tp1",
+  "name": "latte",
   "version": "1.0.0",
   "private": true,
-  "description": "tp11",
+  "description": "latte",
   "devDependencies": {
     "autoprefixer": "^6.7.7",
     "bootstrap-sass": "^3.3.7",
