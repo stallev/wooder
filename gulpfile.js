@@ -49,7 +49,7 @@ gulp.task('serve', ['style'], function() {
 
 gulp.task('copy', function(){
   return gulp.src([
-    'fonts/**/*.{woff,woff2}',
+    'fonts/**/*.{eot,svg,ttf,woff,woff2}',
     'js/**',
     'img/*.svg',
     '*.html'
