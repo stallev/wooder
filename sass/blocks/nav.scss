@@ -1,17 +1,24 @@
 .nav{
   &--header{
-    margin: 25px auto;
+    margin: 0 auto;
   }
 }
 .nav__list{
-
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
 .nav__item{
-
+  padding: 25px 10px;
 }
 .nav__link{
-  font-family: "Lato", Arial, sans-serif;
-  color: red;
-  text-decoration: none;
-  font-weight: 900;
+  font-family: $ff-PD;
+  color: $light-content-c;
+  font-weight: $fw700;
+  font-size: $fsz16;
+  line-height: $lh28;
+  text-transform: capitalize;
+  &--active{
+    color: $main-yellow-c;
+  }
 }

@@ -1,7 +1,11 @@
 .container{
 
   &--header-upper{
-
+    display: flex;
+  }
+  &--header-bottom{
+    padding-bottom: 150px;
+    font-size: 0;
   }
 
 }

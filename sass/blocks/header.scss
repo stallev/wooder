@@ -1,17 +1,30 @@
 .header{
-
+  font-size: 0;
 }
 .header__upper{
-  background-color: rgba(67, 57, 46, 0.46);
+  background-color: $header_upper-c;
 }
 .header__bottom{
-
+  background-image: url(../img/header_bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .header__logo-toggle{
-
+  position: relative;
 }
 .header__toggle{
 
+}
+.header__bottom--menu-link{
+  display: inline-block;
+  border: 2px solid $body-color;
+  padding: 10px 40px;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.33px;
+  color: $light-content-c;
+  font-size: $fsz14;
+  line-height:$lh24;
 }
 @media (max-width: $toast-breakpoint-small) {
 }
