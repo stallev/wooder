@@ -4,14 +4,21 @@
   }
 }
 .nav__list{
+  width: 60%;
+  box-sizing: border-box;
+  display: flex;
+  margin: 25px auto;
 
 }
 .nav__item{
+  list-style-type: none;
+  flex-grow: 1;
 
 }
 .nav__link{
   font-family: "Lato", Arial, sans-serif;
-  color: red;
+  color: white;
   text-decoration: none;
   font-weight: 900;
+  font-size: 25px;
 }
