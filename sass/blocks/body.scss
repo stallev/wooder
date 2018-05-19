@@ -1,3 +1,9 @@
 body{
   font-size: 10px;
 }
+article, div, section, ul, li{
+  outline: 1px solid green;
+}
+ul{
+  padding: 0;
+}

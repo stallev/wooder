@@ -1,0 +1,125 @@
+.menu{
+  padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__tagline{
+    width: 750px;
+    margin: 100px auto 30px auto;
+    text-align: center;
+    color: #2f2f2f;
+    font-family: "Playfair Display";
+    font-size: 32px;
+    font-weight: 900;
+    line-height: 24px;
+    font-weight: 400;
+    letter-spacing: 0.8px;
+  }
+  &__description{
+    width: 750px;
+    margin: 0 auto 100px auto;
+    color: #28211f;
+    font-family: Lato;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+  }
+  &__title{
+    margin: 0 auto;
+    text-align: center;
+    color: #2f2f2f;
+    font-family: "Playfair Display";
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 24px;
+    text-transform: uppercase;
+  }
+  &__card-list{
+    display: flex;
+    margin-top: 30px;
+  }
+  &__price-item{
+    list-style-type: none;
+  }
+  &__card{
+    display: flex;
+    flex-direction: column;
+  }
+  &__card--coffee >.menu__card-product,
+  &__card--tea >.menu__card-product,
+  &__card--desserts >.menu__card-product{
+    background-size: cover;
+  }
+  &__card--coffee >.menu__card-product{
+    background-image: url("/img/cup-of-coffee.png");
+  }
+  &__card--tea >.menu__card-product{
+    background-image: url("/img/cup-of-tea.png");
+  }
+  &__card--desserts >.menu__card-product{
+    background-image: url("/img/dessert.png");
+  }
+  &__card-product{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 396px;
+    height: 294px;
+  }
+  &__card-title{
+    color: #000000;
+    font-family: "Playfair Display";
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 24px;
+    text-transform: uppercase;
+  }
+  &__price-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 60px;
+  }
+  &__price-item{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+  &__price-item-name{
+    color: #28211f;
+    font-family: "Lato - Heavy";
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 28px;
+    text-transform: capitalize;;
+  }
+  &__price-item-value{
+    color: #28211f;
+    font-family: Lato;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 28px;
+  }
+  &__see-full{
+    display: block;
+    margin: 70px auto;
+    width: 250px;
+    text-decoration: none;
+    box-sizing: border-box;
+    padding: 22px 65px;
+    border: 2px solid #39312f;
+    font-family: "Lato - Heavy";
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #39312f;
+    letter-spacing: 0.33px;
+  }
+}
+.menu__card-product:nth-child(even){
+  margin: 0 15px;
+}

@@ -1,0 +1,21 @@
+.social{
+  display: flex;
+  justify-content: center;
+  &__link{
+    box-sizing: border-box;
+    width: 53px;
+    height: 53px;
+    background-position: 54% 42%;
+    background-repeat: no-repeat;
+    background-size: auto;
+  }
+  &__link--facebook{
+    padding: 11px 0 0 15px;
+  }
+  &__link--twitter{
+    padding: 11px 0 0 15px;
+  }
+  &__link--instagram{
+    padding: 11px 0 0 15px;
+  }
+}

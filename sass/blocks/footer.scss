@@ -1,7 +1,17 @@
 .footer{
-
+  background-color: #39312f;
+  &__address{
+    color: #ffffff;
+    font-family: Lato;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.4px;
+    text-align: center;
+  }
 }
 .footer__social{
+  display: flex;
   width: 180px;
   height: 55px;
   margin-right: -5px;
@@ -10,14 +20,9 @@
     box-sizing: border-box;
     width: 53px;
     height: 53px;
-    border: 3px solid rebeccapurple;
-    border-radius: 50%;
     background-position: 54% 42%;
     background-repeat: no-repeat;
     background-size: auto;
-    &:hover{
-      border-color: greenyellow;
-    }
     &:active{
       opacity: 0.5;
     }
