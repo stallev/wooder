@@ -1,3 +1,27 @@
 img{
   max-width: 100%;
 }
+div{
+  box-sizing: border-box;
+}
+a{
+  text-decoration: none;
+}
+div, section, article, span, h1, h2, h3, h4, h5{
+  outline: 1px solid green;
+}
+button{
+  background-color: transparent;
+  border-color: transparent;
+  border-style: none;
+}
+ul, p{
+  margin: 0;
+  padding: 0;
+}
+ul>li{
+  list-style-type: none;
+}
+h1, h2, h3, h4, h5{
+  margin: 0;
+}
