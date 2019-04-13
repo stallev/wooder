@@ -1,22 +1,23 @@
 .nav{}
-}
 .nav__list{
   width: 60%;
   box-sizing: border-box;
   display: flex;
+  justify-content: space-between;
   margin: 25px auto;
 
 }
 .nav__item{
   list-style-type: none;
   flex-grow: 1;
-
 }
 .nav__link{
-  font-family: 'Playfair Display', Arial, sans-serif;
-  color: white;
-  text-decoration: none;
-  font-weight: 900;
-  font-size: 18px;
-  text-transform: capitalize;
+  margin-right: 25px;
+  color: #fff;
+  opacity: 0.5;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 27px;
+  text-transform: uppercase;
+  letter-spacing: 0.38px;
 }
